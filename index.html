@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora</title>
+</head>
+
+<body>
+
+<h2>Calculadora</h2>
+
+<input type="text" id="pantalla">
+
+<br><br>
+
+<button onclick="agregar('1')">1</button>
+<button onclick="agregar('2')">2</button>
+<button onclick="agregar('3')">3</button>
+<button onclick="agregar('+')">+</button>
+
+<br><br>
+
+<button onclick="calcular()">=</button>
+<button onclick="limpiar()">C</button>
+
+<script>
+
+function agregar(valor){
+document.getElementById("pantalla").value += valor;
+}
+
+function limpiar(){
+document.getElementById("pantalla").value = "";
+}
+
+function calcular(){
+let expresion = document.getElementById("pantalla").value;
+let resultado = eval(expresion);
+document.getElementById("pantalla").value = resultado;
+}
+
+</script>
+
+</body>
+</html>
